@@ -1,0 +1,835 @@
+:root {
+    --dark-blue: #364372;
+    --main-red: #DC483A;
+    --light-blue: #3A95CF;
+    --dark-blue-opacity: #364372B3;
+}
+
+html {
+    overflow-x: hidden;
+    background: white;
+    text-size-adjust: none;
+    touch-action: manipulation;
+    font-family: ten-oldstyle, serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.2s ease;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.red-underline {
+    border-bottom: 5px solid var(--main-red);
+}
+
+.red-underline-medium {
+    border-bottom: 10px solid var(--main-red);
+    display: inline-block;
+    height: 90px;
+}
+
+.red-underline-large {
+    border-bottom: 10px solid var(--main-red);
+    display: inline-block;
+    height: 140px;
+}
+
+.donate-button-seperator {
+    position: absolute;
+    background-color: var(--main-red);
+    border: 5px solid var(--dark-blue);
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    padding: 0px 100px 0px 100px;
+    box-shadow: 0px 0px 40px -2px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px 0px 40px -2px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 40px -2px rgba(0,0,0,1);
+    transition: all 0.2s ease;
+}
+
+.donate-button-seperator a {
+    text-decoration: none;
+    color: white;
+}
+
+.donate-button-seperator:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    left: 50%;
+    top: 0;
+    filter: brightness(110%);
+}
+
+.donate-button-seperator-gallery {
+    position: absolute;
+    background-color: var(--main-red);
+    border: 5px solid var(--dark-blue);
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    left: 50%;
+    bottom: -100px;
+    transform: translate(-50%, -50%);
+    padding: 0px 100px 0px 100px;
+    box-shadow: 0px 0px 40px -2px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px 0px 40px -2px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 40px -2px rgba(0,0,0,1);
+    transition: all 0.2s ease;
+    z-index: 9;
+}
+
+.donate-button-seperator-gallery a {
+    text-decoration: none;
+    color: white;
+}
+
+.donate-button-seperator-gallery:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    left: 50%;
+    bottom: -100px;
+    filter: brightness(110%);
+}
+
+#header {
+    background-image: url("/img/lake-adjusted.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+#header-logo {
+    position: absolute;
+    width: 240px;
+    top: 0;
+    left: 0;
+    padding-top: 15px;
+    padding-left: 30px;
+}
+
+#header-logo img {
+    width: 240px;
+}
+
+#header-right-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+#header-donate {
+    position: relative;
+    width: 180px;
+    background-color: var(--main-red);
+    border: 5px solid var(--dark-blue);
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+#header-donate:hover {
+    transform: scale(1.1);
+    filter: brightness(110%);
+}
+
+#header-donate a {
+    text-decoration: none;
+}
+
+#header-social {
+    color: white;
+    float: left;
+    font-size: 40px;
+}
+
+#header-social:after {
+    content: "\00a0\00a0";
+}
+
+#header-social a {
+    text-decoration: none;
+    color: white;
+}
+
+#header-text-background {
+    background-color: var(--dark-blue-opacity);
+    position: absolute;
+    padding: 0px 50px 0px 175px;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+#header-text {
+    position: relative;
+    float: left;
+    color: white;
+    font-size: 65px;
+    line-height: 65px;
+    margin-top: -40px;
+    margin-bottom: -40px;
+}
+
+#accomplishments-seperator {
+    background-color: var(--dark-blue);
+    width: 100vw;
+    padding: 20px 0px 20px 0px;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+#learn-more {
+    color: white;
+    margin-top: -30px;
+}
+
+.blue-text {
+    font-weight: 700;
+    color: var(--light-blue);
+}
+
+#accomplishments {
+    background-image: linear-gradient(#626262, #626262), url("/img/centerville-opt.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    width: 100vw;
+    text-align: center;
+    padding: 40px 0px 40px 0px;
+    overflow: auto;
+}
+
+.accomplishments-column {
+    float: left;
+    width: 50%;
+}
+
+.accomplishment {
+    color: white;
+    background-color: var(--dark-blue);
+    font-size: 30px;
+    line-height: 30px;
+    padding: 15px 0px 15px 0px;
+    transition: 0.2s;
+}
+
+.accomplishment.left {
+    margin: 60px 80px 60px 150px;
+}
+
+.accomplishment.right {
+    margin: 60px 150px 60px 80px;
+}
+
+.accomplishment:hover {
+    transform: scale(1.05);
+    filter: brightness(110%);
+    font-weight: 700;
+}
+
+#accomplishments a {
+    text-decoration: none;
+    color: white;
+}
+
+#family-photo {
+    position: relative;
+    background-image: url('/img/roadstanding-opt.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 53.1875%;
+}
+
+#meet-brian {
+    position: relative;
+    background-color: white;
+    width: 100vw;
+    padding-bottom: 20px;
+}
+
+#meet-brian-text {
+    color: var(--dark-blue);
+    position: absolute;
+    font-size: 120px;
+    text-align: center;
+    font-weight: 400;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -100%);
+}
+
+#meet-brian-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#meet-brian-family-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 20px;
+    overflow: hidden;
+}
+
+#meet-brian-family-photo {
+    position: absolute;
+    width: 60%;
+}
+
+#meet-brian-family-description {
+    position: absolute;
+    right: 0;
+    background-color: var(--main-red);
+    font-size: 50px;
+    text-align: left;
+    width: 45%;
+    top: 50%;
+    color: white;
+    padding: 40px 0 40px 40px;
+    transform: translateY(-50%);
+}
+
+#meet-brian-family-photo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#meet-brian-baseball-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    overflow: hidden;
+}
+
+#meet-brian-baseball-photo {
+    position: absolute;
+    width: 60%;
+    right: 0;
+}
+
+#meet-brian-baseball-description {
+    position: absolute;
+    left: 0;
+    background-color: var(--main-red);
+    font-size: 50px;
+    text-align: left;
+    width: 45%;
+    top: 50%;
+    color: white;
+    padding: 40px 0 40px 40px;
+    transform: translateY(-50%);
+}
+
+#meet-brian-baseball-photo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#issues {
+    position: relative;
+    display: flex;
+    background-color: white;
+    width: 100vw;
+    padding-bottom: 100px;
+}
+
+#on-the-issues {
+    color: var(--dark-blue);
+    position: absolute;
+    font-size: 80px;
+    text-align: center;
+    font-weight: 400;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.issues-column {
+    position: relative;
+    top: 100px;
+    float: left;
+    width: 33.333%;
+}
+
+.issue {
+    position: relative;
+    color: white;
+    background-color: var(--dark-blue);
+    font-size: 40px;
+    padding: 15px 15px 15px 15px;
+    margin: 50px;
+}
+
+.issue-title {
+    text-align: center;
+    font-size: 50px;
+}
+
+.issue-title-seperator {
+    position: relative;
+    margin-top: 20px;
+    border-bottom: 10px solid var(--main-red);
+    width: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.issue-text {
+    font-size: 30px;
+    margin: 20px 15px 20px 15px;
+}
+
+#gallery {
+    background-image: url("/img/miccosukee-opt.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    text-align: center;
+    overflow: auto;
+    transition: all 0.2s ease;
+}
+
+.gallery-container {
+  position: relative;
+  padding: 100px;
+  max-height: 100%;
+  transition: all 0.2s ease;
+}
+
+.gallery-slide {
+  display: none;
+  transition: all 0.2s ease;
+}
+
+.gallery-slide img {
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 90vh;
+    transition: all 0.2s ease;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 80px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.number-text {
+  color: #f2f2f2;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  font-weight: 700;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+}
+
+.caption-container {
+  text-align: center;
+  /* background-color: #222; */
+  padding: 2px 16px;
+  color: white;
+}
+
+#caption {
+    font-size: 30px;
+}
+
+#footer {
+    position: relative;
+    background-color: var(--dark-blue);
+    width: 100vw;
+    height: 300px;
+}
+
+#footer-logo {
+    max-width: 240px;
+    position: absolute;
+    padding-top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#footer-logo img {
+    width: 240px;
+}
+
+#disclaimer {
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    border: 1px solid #FFFFFF;
+    padding: 5px;
+}
+
+#footer-center-container {
+    position: absolute;
+    left: 50%;
+    top: 175px;
+    transform: translateX(-50%);
+}
+
+#footer-donate {
+    position: relative;
+    width: 180px;
+    background-color: var(--main-red);
+    border: 5px solid var(--dark-blue);
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+#footer-donate:hover {
+    transform: scale(1.1);
+    filter: brightness(110%);
+}
+
+#footer-social {
+    color: white;
+    float: left;
+    font-size: 40px;
+}
+
+#footer-social:after {
+    content: "\00a0\00a0";
+}
+
+#footer-social a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Mobile Optimization */
+
+@media screen and (max-width: 900px) {
+    
+    #header {
+        background-image: url("/img/lake.jpg");
+    }
+    
+    #header-logo {
+        padding-top: 35px;
+    }
+    
+    #header-logo img {
+        width: 100px;
+    }
+    
+    #header-social {
+        font-size: 30px;
+        float: none;
+        text-align: center;
+    }
+    
+    #header-donate {
+        font-size: 20px;
+    }
+    
+    #header-social:after {
+        content: "";
+    }
+
+    #footer-social:after {
+        content: "";
+    }
+    
+    #header-text-background {
+        bottom: 20px;
+        top: revert;
+        transform: revert;
+        width: 100%;
+        padding: 15px 0 15px 0;
+    }
+    
+    #header-text {
+        text-align: center;
+        font-size: 35px;
+        width: 100%;
+        line-height: 45px;
+    }
+    
+    .accomplishments-column {
+        width: 100%;
+        margin-bottom: -10px;
+    }
+    
+    .accomplishment {
+        position: relative;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .accomplishment.left, .accomplishment.right {
+        margin: 10px 0 10px 0;
+    }
+    
+    .accomplishment:hover {
+        transform: translateX(-50%);
+        filter: inherit;
+        font-weight: inherit;
+    }
+    
+    .donate-button-seperator {
+        width: 30%;
+    }
+    
+    #meet-brian-text {
+        font-size: 45px;
+        width: 100%;
+        transform: translate(-50%, -65%);
+        margin-bottom: 20px;
+    }
+    
+    .red-underline-large {
+        height: 50px;
+        border-bottom: 5px solid var(--main-red);
+    }
+    
+    #meet-brian-family-container {
+        display: block;
+        position: relative;
+    }
+    
+    #meet-brian-family-photo {
+        position: relative;
+        width: 100%;
+        padding-top: 10px;
+    }
+    
+    #meet-brian-family-description {
+        position: relative;
+        background-color: var(--main-red);
+        font-size: 35px;
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding: 20px 0 20px 0px;
+        transform: translateY(-10%);
+        top: revert;
+        right: revert;
+    }
+    
+    #meet-brian-baseball-container {
+        display: block;
+        position: relative;
+        top: revert;
+        height: revert;
+    }
+    
+    #meet-brian-baseball-photo {
+        position: relative;
+        width: 100%;
+    }
+    
+    #meet-brian-baseball-description {
+        position: relative;
+        background-color: var(--main-red);
+        font-size: 25px;
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding: 20px 0 20px 0px;
+        transform: translateY(-10%);
+        top: revert;
+        right: revert;
+    }
+    
+    #on-the-issues {
+        width: 100%;
+        font-size: 45px;
+        padding-bottom: 50px;
+    }
+    
+    .red-underline-medium {
+        height: 50px;
+        border-bottom: 5px solid var(--main-red);
+    }
+    
+    #issues {
+        display: block;
+    }
+    
+    .issues-column {
+        width: 100%;
+    }
+    
+    .issue {
+        margin: 10px;
+        padding: 5px;
+    }
+    
+    .donate-button-seperator-gallery {
+        display: none;
+    }
+    
+    .gallery-container {
+        padding: 0;
+        margin-top: 150px;
+    }
+    
+    .prev, .next {
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+        font-size: 40px;
+    }
+    
+    .prev:hover, .next:hover {
+      background-color: revert;
+    }
+    
+    .number-text {
+        font-size: 25px;
+    }
+    
+    #caption {
+        font-size: 20px;
+    }
+    
+    #footer-logo img {
+        width: 140px;
+    }
+    
+    #footer-center-container {
+        text-align: center;
+        top: 115px;
+    }
+    
+    #footer-social {
+        float: revert;
+    }
+    
+    #disclaimer {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #header-text {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    
+    #header-logo {
+        padding-top: 25px;
+    }
+
+    #header-text-background {
+        padding: 25px 0 25px 0;
+    }
+
+    #header-social {
+        font-size: 20px;
+    }
+
+    #header-donate {
+        width: 120px;
+        font-size: 15px;
+    }
+    
+    #accomplishments-seperator {
+        font-size: 30px;
+    }
+    
+    .accomplishment {
+        font-size: 25px;
+    }
+    
+    .donate-button-seperator {
+        font-size: 20px;
+    }
+    
+    #meet-brian-family-description {
+        font-size: 25px;
+        padding: 10px 0 20px 0;
+    }
+    
+    #meet-brian-baseball-description {
+        font-size: 20px;
+        padding: 10px 0 10px 0;
+    }
+    
+    .issue-title {
+        font-size: 40px;
+    }
+    
+    .issue-title-seperator {
+        margin-top: 10px;
+    }
+    
+    .issue-text {
+        font-size: 25px;
+    }
+    
+    .number-text {
+        font-size: 20px;
+    }
+    
+    #footer {
+        height: 275px;
+    }
+    
+    #footer-social {
+        font-size: 30px;
+    }
+    
+    #footer-donate {
+        font-size: 20px;
+    }
+}
