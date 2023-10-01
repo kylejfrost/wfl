@@ -590,6 +590,14 @@ body {
         content: "";
     }
 
+    #header-right-container {
+        margin-top: 15px;
+    }
+
+    .petition {
+        margin-top: 5px;
+    }
+
     #footer-social:after {
         content: "";
     }
